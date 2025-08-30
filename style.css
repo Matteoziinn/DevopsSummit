@@ -1,4 +1,8 @@
 /* style.css — DevOps Summit
+
+
+/* Hero */
+.hero{
 padding:48px 0;
 background-image:linear-gradient(180deg, rgba(11,102,255,0.06), transparent);
 }
