@@ -1,0 +1,58 @@
+/* style.css — DevOps Summit
+padding:48px 0;
+background-image:linear-gradient(180deg, rgba(11,102,255,0.06), transparent);
+}
+.hero-inner{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.hero h2{font-size:2rem;line-height:1.1;color:#0f172a}
+.lead{color:var(--muted)}
+.btn{
+display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none;background:var(--accent);color:white;margin-top:8px;font-weight:600;
+}
+
+
+/* Sections */
+.section{padding:28px 0;border-top:1px solid #eef2f6}
+
+
+/* REGRAS DE H2 - resolução do conflito (união das duas versões) */
+h2{
+color:var(--primary);
+text-transform:uppercase;
+padding-bottom:10px;
+letter-spacing:0.02em;
+font-size:1.1rem;
+}
+
+
+.agenda-list{list-style:none;margin-top:12px}
+.agenda-list li{padding:10px 0;border-bottom:1px dashed #e6edf3;color:var(--muted)}
+
+
+/* Palestrantes */
+.profiles{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:16px;
+margin-top:12px;
+}
+.profile-card{
+background:white;padding:14px;border-radius:12px;box-shadow:0 6px 16px rgba(16,24,40,0.04);
+}
+.profile-card h3{margin-top:8px;margin-bottom:6px}
+.profile-card p{color:var(--muted);font-size:0.95rem}
+.avatar{width:100%;height:140px;object-fit:cover;border-radius:8px}
+
+
+/* Footer */
+.site-footer{padding:20px 0;margin-top:24px}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.site-footer p{color:var(--muted)}
+.btn-link{text-decoration:none;color:var(--accent);font-weight:600;margin-left:10px}
+
+
+/* Responsividade */
+@media (max-width:720px){
+.header-inner{flex-direction:column;align-items:flex-start}
+.footer-inner{flex-direction:column;align-items:flex-start}
+.hero h2{font-size:1.5rem}
+}
