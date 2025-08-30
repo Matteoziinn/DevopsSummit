@@ -1,62 +1,162 @@
-/* style.css — DevOps Summit
-
-
-/* Hero */
-.hero{
-padding:48px 0;
-background-image:linear-gradient(180deg, rgba(11,102,255,0.06), transparent);
-}
-.hero-inner{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
-.hero h2{font-size:2rem;line-height:1.1;color:#0f172a}
-.lead{color:var(--muted)}
-.btn{
-display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none;background:var(--accent);color:white;margin-top:8px;font-weight:600;
+/* ========== RESET & BASE ========= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
-/* Sections */
-.section{padding:28px 0;border-top:1px solid #eef2f6}
-
-
-/* REGRAS DE H2 - resolução do conflito (união das duas versões) */
-h2{
-color:var(--primary);
-text-transform:uppercase;
-padding-bottom:10px;
-letter-spacing:0.02em;
-font-size:1.1rem;
+:root {
+  --primary: #60a5fa;   /* Azul suave */
+  --accent: #3b82f6;    /* Azul forte */
+  --muted: #94a3b8;     /* Cinza claro */
+  --bg: #0f172a;        /* Fundo escuro */
+  --card-bg: #1e293b;   /* Fundo de cartões */
+  --text: #e2e8f0;      /* Texto claro */
 }
 
-
-.agenda-list{list-style:none;margin-top:12px}
-.agenda-list li{padding:10px 0;border-bottom:1px dashed #e6edf3;color:var(--muted)}
-
-
-/* Palestrantes */
-.profiles{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:16px;
-margin-top:12px;
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
 }
-.profile-card{
-background:white;padding:14px;border-radius:12px;box-shadow:0 6px 16px rgba(16,24,40,0.04);
+
+/* ========== HERO ========= */
+.hero {
+  padding: 64px 0;
+  background: linear-gradient(180deg, rgba(59,130,246,0.1), transparent);
+  text-align: center;
 }
-.profile-card h3{margin-top:8px;margin-bottom:6px}
-.profile-card p{color:var(--muted);font-size:0.95rem}
-.avatar{width:100%;height:140px;object-fit:cover;border-radius:8px}
 
+.hero h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary);
+}
 
-/* Footer */
-.site-footer{padding:20px 0;margin-top:24px}
-.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:12px}
-.site-footer p{color:var(--muted)}
-.btn-link{text-decoration:none;color:var(--accent);font-weight:600;margin-left:10px}
+.lead {
+  font-size: 1.1rem;
+  color: var(--muted);
+  margin-top: 8px;
+}
 
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  background: var(--accent);
+  color: white;
+  margin-top: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
 
-/* Responsividade */
+.btn:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+}
+
+/* ========== SECTIONS ========= */
+.section {
+  padding: 40px 0;
+  border-top: 1px solid rgba(148,163,184,0.2);
+}
+
+h2 {
+  color: var(--primary);
+  text-transform: uppercase;
+  padding-bottom: 12px;
+  letter-spacing: 0.04em;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+/* Agenda */
+.agenda-list {
+  list-style: none;
+  margin-top: 16px;
+}
+.agenda-list li {
+  padding: 12px 0;
+  border-bottom: 1px dashed rgba(148,163,184,0.3);
+  color: var(--muted);
+}
+
+/* ========== PALESTRANTES ========= */
+.profiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.profile-card {
+  background: var(--card-bg);
+  padding: 16px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.5);
+}
+
+.profile-card h3 {
+  margin-top: 10px;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+
+.profile-card p {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.avatar {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* ========== FOOTER ========= */
+.site-footer {
+  padding: 24px 0;
+  margin-top: 40px;
+  border-top: 1px solid rgba(148,163,184,0.2);
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.site-footer p {
+  color: var(--muted);
+}
+
+.btn-link {
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: 600;
+  margin-left: 12px;
+  transition: color 0.3s ease;
+}
+
+.btn-link:hover {
+  color: white;
+}
+
+/* ========== RESPONSIVIDADE ========= */
 @media (max-width:720px){
-.header-inner{flex-direction:column;align-items:flex-start}
-.footer-inner{flex-direction:column;align-items:flex-start}
-.hero h2{font-size:1.5rem}
+  .hero h2 { font-size: 2rem; }
+  .footer-inner { flex-direction: column; align-items: flex-start; }
 }
